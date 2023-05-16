@@ -6,9 +6,8 @@
   --colorgrad2: #e8eaec;
   --colorgrad3: #343941;
   --cardsgap: 64px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
-
 
 body {
   color: var(--color2);
@@ -74,7 +73,6 @@ body {
   transform: scale(0.9);
 }
 
-
 .Categories {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -90,7 +88,6 @@ body {
   z-index: 2;
 }
 
-
 h1 {
   font-size: 32;
   font-weight: 700;
@@ -98,7 +95,7 @@ h1 {
   margin-left: 32px;
   padding-left: 32px;
 }
-h1::first-letter{
+h1::first-letter {
   font-size: 120%;
 }
 
@@ -156,7 +153,6 @@ h1::first-letter{
   margin-right: 5%;
   width: 20%;
   margin-top: 8px;
-
 }
 
 footer {
