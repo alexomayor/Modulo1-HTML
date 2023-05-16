@@ -2,13 +2,150 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Shopping Webpage</title>
+    <script>
+      console.log("Shopping Webpage");
+    </script>
   </head>
+
   <body>
-    <div id="app">
-      <h1>TypeScript Sandbox</h1>
+    <nav class="navbar">
+      <div class="menubutton">
+        <img
+          src="icon-menu-burguer.svg"
+          alt="Menu Button"
+          title="Menu Button"
+        />
+      </div>
+
+      <div class="Categories">
+        <a href="#">MODA MUJER</a>
+        <a href="#">MODA HOMBRE</a>
+        <a href="#">NUEVA COLECCION</a>
+        <a href="#">COLECCIONES ESPECIALES</a>
+      </div>
+
+      <div class="mainbuttons">
+        <div class="mainbuttons-1">
+          <img src="icon-user.svg" alt="ProfileButton" title="Profile Button" />
+        </div>
+        <div class="mainbuttons-1">
+          <img
+            src="/icon-heart.svg"
+            alt="WhislistButton"
+            title="Whislist Button"
+          />
+        </div>
+        <div class="mainbuttons-1">
+          <img
+            src="icon-shopping-cart.svg"
+            alt="CartButton"
+            title="Cart Button"
+          />
+        </div>
+      </div>
+    </nav>
+
+    <h1>NUEVAS COLECCIONES</h1>
+
+    <div class="cardscontainer">
+      <div class="card1">
+        <div class="cardimg">
+          <img src="image-3.jpg" alt="Vestido verde" title="Vestido" />
+        </div>
+        <br />
+        <div class="productname"><span>Vestido</span></div>
+        <div class="productprice"><span>34.99 $</span></div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimg">
+          <img src="image-6.jpg" alt="Camisa amarilla" title="Camisa" />
+        </div>
+        <br />
+        <div class="productname"><span>Camisa</span></div>
+        <div class="productprice"><span>44.99 $</span></div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimg">
+          <img src="image-4.jpg" alt="Vaqueros blancos" title="Vaqueros" />
+        </div>
+        <br />
+        <div class="productname"><span>Vaqueros</span></div>
+        <div class="productprice"><span>79.99 $</span></div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimg">
+          <img src="image-5.jpg" alt="Polo" title="Polo" />
+        </div>
+        <br />
+        <div class="productname"><span>Polo</span></div>
+        <div class="productprice"><span>44.99 $</span></div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimg">
+          <img src="image-1.jpg" alt="Camisa hombre blanca" title="Camisa" />
+        </div>
+        <br />
+        <div class="productname"><span>Camisa</span></div>
+        <div class="productprice"><span>25.00 $</span></div>
+      </div>
+
+      <div class="card1">
+        <div class="cardimg">
+          <img
+            src="image-2.jpg"
+            alt="Camiseta hombre blanca"
+            title="Camiseta"
+          />
+        </div>
+        <br />
+        <div class="productname"><span>Camiseta</span></div>
+        <div class="productprice"><span>22.99 $</span></div>
+      </div>
+    </div>
+
+    <br />
+    <div>
+      <footer>
+        <div class="footer-1">
+          <div class="footer-2">
+            <img
+              src="icon-truck.svg"
+              alt="ShippingButton"
+              title="Shipping Button"
+            />
+            <div class="footer-3">Entrega</div>
+          </div>
+        </div>
+        <div class="footer-1">
+          <div class="footer-3">Devoluciones y Cambios</div>
+        </div>
+        <div class="footer-1">
+          <div class="footer-2">
+            <img
+              src="icon-phone.svg"
+              alt="PhoneNumberButton"
+              title="Phone Number Button"
+            />
+            <div class="footer-3">+375(29)749-18-23</div>
+          </div>
+        </div>
+        <div class="footer-1">
+          <div class="footer-2">
+            <img
+              src="icon-mail.svg"
+              alt="PhoneNumberButton"
+              title="Phone Number Button"
+            />
+            <div class="footer-3">shop@ornix.com</div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
