@@ -6,14 +6,13 @@
   --colorgrad2: #e8eaec;
   --colorgrad3: #343941;
   --cardsgap: 64px;
-
-  @font-face {
-    font-family: "monserrat";
-    src: url("https://fonts.google.com/specimen/Montserrat?query=monts");
-  }
+  font-family: 'Montserrat';
 }
 
+
 body {
+  color: var(--color2);
+  margin: 0;
   width: 1280px;
 }
 
@@ -25,15 +24,14 @@ body {
   display: flex;
   font-size: 16px;
   justify-content: space-between;
-  margin-left: 0px;
+  margin-left: 0;
+  margin-right: 0;
   padding-left: 32px;
-  padding-right: 32px;
-
   position: sticky;
   text-align: center;
   text-decoration: none;
   top: 0;
-  width: 100%;
+  width: calc(100% -32px);
   z-index: 1;
 }
 .navbar a {
@@ -50,11 +48,10 @@ body {
 }
 
 .menubutton,
-.mainbuttons,
+.mainbuttons-1,
 .Categories {
-  display: flex;
   align-items: center;
-  display: block;
+  display: flex;
   justify-items: center;
   margin-bottom: 16px;
   margin-top: 16px;
@@ -62,7 +59,7 @@ body {
 }
 
 .menubutton :hover,
-.mainbuttons :hover {
+.mainbuttons-1 :hover {
   animation: flip-diagonal-1-fwd 0.9s cubic-bezier(0.455, 0.05, 0.55, 0.95) both;
   background-image: radial-gradient(
     var(--colorgrad1),
@@ -71,15 +68,12 @@ body {
   );
 }
 
-.menubutton :active,
-.mainbuttons1 :active,
+.menubutton:active,
+.mainbuttons-1:active,
 .Categories :active {
   transform: scale(0.9);
 }
-.menubutton,
-.mainbuttons-1 {
-  display: flex;
-}
+
 
 .Categories {
   display: grid;
@@ -90,17 +84,22 @@ body {
 .mainbuttons {
   display: grid;
   grid-template-columns: repeat(3, auto);
+  margin-bottom: 16px;
+  margin-top: 16px;
   width: 20%;
+  z-index: 2;
 }
-body {
-  font: normal 14px "arial";
-  margin: 0 0;
-}
+
 
 h1 {
   font-size: 32;
+  font-weight: 700;
   line-height: 1.1;
   margin-left: 32px;
+  padding-left: 32px;
+}
+h1::first-letter{
+  font-size: 120%;
 }
 
 .cardscontainer {
@@ -124,7 +123,7 @@ h1 {
   transition: all 1.35 ease-in-out;
 }
 .cardscontainer :active {
-  transform: scale(0.9);
+  transform: scale(0.97);
 }
 .card1:hover {
   background-image: linear-gradient(var(--color1) 90%, var(--color3));
@@ -148,6 +147,7 @@ h1 {
   margin-bottom: 3%;
   margin-left: 5%;
   width: 70%;
+  margin-top: 8px;
 }
 .productprice {
   float: left;
@@ -155,6 +155,8 @@ h1 {
   margin-bottom: 3%;
   margin-right: 5%;
   width: 20%;
+  margin-top: 8px;
+
 }
 
 footer {
@@ -163,7 +165,6 @@ footer {
   display: flex;
   font-size: 16;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
   justify-content: space-between;
   margin-bottom: 0;
   margin-left: 0;
@@ -174,6 +175,7 @@ footer {
   vertical-align: middle;
   width: 100%;
   z-index: 1;
+  top: 16px;
 }
 footer div {
   align-items: center;
