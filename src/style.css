@@ -42,7 +42,7 @@ body {
   text-align: center;
   text-decoration: none;
 }
-.Categories :hover {
+.Categories a:hover {
   text-decoration: underline;
 }
 
@@ -186,7 +186,8 @@ footer div {
   gap: 8px;
   /* overflow: hidden; */
 }
-.footer-2 img {
+.footer-2 span {
+  display: flex;
   align-items: center;
   background-color: var(--color1);
   border-radius: 50%;
