@@ -15,7 +15,7 @@ body {
   width: 1280px;
 }
 
-.navBar {
+.navbar {
   background-color: var(--color1);
   border-bottom-color: var(--color2);
   border-bottom-style: solid;
@@ -25,32 +25,30 @@ body {
   justify-content: space-between;
   margin-left: 0;
   margin-right: 0;
+  padding-left: 32px;
   position: sticky;
   text-align: center;
   text-decoration: none;
   top: 0;
-  width: 100%;
+  width: calc(100% -32px);
   z-index: 1;
 }
-.navBar a {
+.navbar a {
   align-items: center;
   color: var(--color2);
   display: flex;
   justify-content: center;
-  margin: 8px;
+  padding: 8px;
   text-align: center;
   text-decoration: none;
 }
-.categories a:hover {
+.Categories :hover {
   text-decoration: underline;
 }
-.menuButton {
-  padding-left: 32px;
-}
 
-.menuButton,
-.mainButtons-1,
-.categories {
+.menubutton,
+.mainbuttons-1,
+.Categories {
   align-items: center;
   display: flex;
   justify-items: center;
@@ -59,8 +57,8 @@ body {
   z-index: 2;
 }
 
-.menuButton :hover,
-.mainButtons-1 :hover {
+.menubutton :hover,
+.mainbuttons-1 :hover {
   animation: flip-diagonal-1-fwd 0.9s cubic-bezier(0.455, 0.05, 0.55, 0.95) both;
   background-image: radial-gradient(
     var(--colorgrad1),
@@ -69,19 +67,19 @@ body {
   );
 }
 
-.menuButton:active,
-.mainButtons-1:active,
-.categories a:active {
+.menubutton:active,
+.mainbuttons-1:active,
+.Categories :active {
   transform: scale(0.9);
 }
 
-.categories {
+.Categories {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-left: 32px;
   padding-right: 32px;
 }
-.mainButtons {
+.mainbuttons {
   display: grid;
   grid-template-columns: repeat(3, auto);
   margin-bottom: 16px;
@@ -101,16 +99,17 @@ h1::first-letter {
   font-size: 120%;
 }
 
-.cardsContainer {
+.cardscontainer {
   display: grid;
   gap: var(--cardsgap);
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin-left: 128px;
   margin-right: 128px;
+  /* background-color: #212429;*/
   padding: 32px;
 }
-.card1 .productName span,
-.card1 .productPrice span {
+.card1 .productname span,
+.card1 .productprice span {
   font-size: 14px;
 }
 
@@ -120,32 +119,34 @@ h1::first-letter {
   position: relative;
   transition: all 1.35 ease-in-out;
 }
-.cardsContainer :active {
+.cardscontainer :active {
   transform: scale(0.97);
 }
 .card1:hover {
   background-image: linear-gradient(var(--color1) 90%, var(--color3));
+}
+.card1:hover {
   box-shadow: 3px 3px 3px #888;
 }
 
-.cardImg {
+.cardimg {
   width: 100%;
 }
-.cardImg img {
+.cardimg img {
   border-radius: 5%;
   display: block;
   margin: 0 auto;
   width: 100%;
 }
 
-.productName {
+.productname {
   float: left;
   margin-bottom: 3%;
   margin-left: 5%;
   width: 70%;
   margin-top: 8px;
 }
-.productPrice {
+.productprice {
   float: left;
   font-weight: 600;
   margin-bottom: 3%;
@@ -164,6 +165,7 @@ footer {
   margin-bottom: 0;
   margin-left: 0;
   padding-bottom: 16px;
+  padding-right: 8px;
   padding-top: 16px;
   text-decoration: none;
   vertical-align: middle;
@@ -184,8 +186,7 @@ footer div {
   gap: 8px;
   /* overflow: hidden; */
 }
-.footer-2 span {
-  display: flex;
+.footer-2 img {
   align-items: center;
   background-color: var(--color1);
   border-radius: 50%;
