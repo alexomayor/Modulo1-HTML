@@ -15,7 +15,8 @@ body {
   width: 100%;
 }
 
-.navBar {
+.navBar,
+.menuButtonMobile {
   background-color: var(--color1);
   border-bottom-color: var(--color2);
   border-bottom-style: solid;
@@ -25,7 +26,7 @@ body {
   justify-content: space-between;
   margin-left: 0;
   margin-right: 0;
-  padding-left: 32px;
+  padding: 0 16px;
   position: sticky;
   text-align: center;
   text-decoration: none;
@@ -33,6 +34,12 @@ body {
   width: 100%;
   z-index: 1;
 }
+.menuButtonMobile {
+  display: none;
+  justify-content: center;
+  padding: 8px 16px;
+}
+
 .navBar a {
   align-items: center;
   color: var(--color2);
@@ -46,8 +53,8 @@ body {
   text-decoration: underline;
 }
 
-.menuButton,
-.mainButtons-1,
+.navBar img,
+.mainButtons,
 .categories {
   align-items: center;
   display: flex;
@@ -57,8 +64,8 @@ body {
   z-index: 2;
 }
 
-.menuButton img:hover,
-.mainButtons-1 img:hover {
+.menuButton:hover,
+.mainButtons img:hover {
   animation: flip-diagonal-1-fwd 0.9s cubic-bezier(0.455, 0.05, 0.55, 0.95) both;
   background-image: radial-gradient(
     var(--colorgrad1),
@@ -68,7 +75,7 @@ body {
 }
 
 .menuButton:active,
-.mainButtons-1:active,
+.mainButtons a:active,
 .categories a:active {
   transform: scale(0.9);
 }
@@ -92,6 +99,7 @@ h1 {
   font-size: 32;
   font-weight: 700;
   line-height: 1.1;
+  margin: 16px;
   margin-left: 32px;
   padding-left: 32px;
 }
@@ -100,17 +108,16 @@ h1::first-letter {
 }
 
 .cardsContainer {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--cardsgap);
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  margin-left: 128px;
-  margin-right: 128px;
-  /* background-color: #212429;*/
+  justify-content: center;
+  margin: 0 auto;
   padding: 32px;
-  width: 1280px;
+  max-width: 1280px;
 }
-.card1 .productName span,
-.card1 .productPrice span {
+.card1 .productNameAndPrice span {
   font-size: 14px;
 }
 
@@ -137,20 +144,14 @@ h1::first-letter {
   width: 100%;
 }
 
-.productName {
-  float: left;
-  margin-bottom: 3%;
-  margin-left: 5%;
-  width: 70%;
-  margin-top: 8px;
+.productNameAndPrice {
+  display: flex;
+  justify-content: space-between;
+  margin: 3% 5% 3% 5%;
 }
+
 .productPrice {
-  float: left;
   font-weight: 600;
-  margin-bottom: 3%;
-  margin-right: 5%;
-  width: 20%;
-  margin-top: 8px;
 }
 
 footer {
@@ -166,10 +167,10 @@ footer {
   padding-right: 8px;
   padding-top: 16px;
   text-decoration: none;
+  top: 16px;
   vertical-align: middle;
   width: 100%;
   z-index: 1;
-  top: 16px;
 }
 footer div {
   align-items: center;
@@ -185,12 +186,12 @@ footer div {
   /* overflow: hidden; */
 }
 .footer-2b {
-  display: flex;
-  border-radius: 50%;
-  padding: 8px;
-  background-color: var(--color1);
   align-items: center;
+  background-color: var(--color1);
+  border-radius: 50%;
+  display: flex;
   justify-items: center;
+  padding: 8px;
 }
 .footer-1:hover {
   text-decoration: underline;
@@ -210,4 +211,28 @@ footer div {
 
 .footer-1:active {
   transform: scale(0.9);
+}
+
+@media only screen and (max-width: 800px) {
+  footer {
+    display: flex;
+    width: 100%;
+    padding-top: 0;
+    flex-direction: column;
+  }
+  .footer-1 {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--color1);
+    margin-left: 32px;
+    margin-right: 32px;
+    padding: 16px 0 16px 0;
+  }
+  .navBar {
+    display: none;
+  }
+  .menuButtonMobile {
+    display: flex;
+  }
 }
