@@ -30,7 +30,7 @@ body {
   text-align: center;
   text-decoration: none;
   top: 0;
-  width: calc(100% -32px);
+  width: 100%;
   z-index: 1;
 }
 .navBar a {
