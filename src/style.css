@@ -49,12 +49,8 @@ body {
   text-align: center;
   text-decoration: none;
 }
-.categories a:hover {
-  text-decoration: underline;
-}
-
 .navBar img,
-.mainButtons,
+.menuButton,
 .categories {
   align-items: center;
   display: flex;
@@ -63,23 +59,6 @@ body {
   margin-top: 16px;
   z-index: 2;
 }
-
-.menuButton:hover,
-.mainButtons img:hover {
-  animation: flip-diagonal-1-fwd 0.9s cubic-bezier(0.455, 0.05, 0.55, 0.95) both;
-  background-image: radial-gradient(
-    var(--colorgrad1),
-    var(--colorgrad2),
-    var(--color1)
-  );
-}
-
-.menuButton:active,
-.mainButtons a:active,
-.categories a:active {
-  transform: scale(0.9);
-}
-
 .categories {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -93,6 +72,26 @@ body {
   margin-top: 16px;
   width: 20%;
   z-index: 2;
+}
+.categories a:hover {
+  text-decoration: underline;
+}
+.menuButton img:hover,
+.menuButtonMobile img:hover,
+.mainButtons img:hover {
+  animation: flip-diagonal-1-fwd 0.9s cubic-bezier(0.455, 0.05, 0.55, 0.95) both;
+  background-image: radial-gradient(
+    var(--colorgrad1),
+    var(--colorgrad2),
+    var(--color1)
+  );
+}
+
+.menuButton:active,
+.menuButtonMobile:active,
+.mainButtons img:active,
+.categories a:active {
+  transform: scale(0.9);
 }
 
 h1 {
