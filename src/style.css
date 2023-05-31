@@ -12,7 +12,6 @@
 body {
   color: var(--color2);
   margin: 0;
-  width: 100%;
 }
 
 .navBar,
@@ -31,7 +30,6 @@ body {
   text-align: center;
   text-decoration: none;
   top: 0;
-  width: 100%;
   z-index: 1;
 }
 .menuButtonMobile {
@@ -70,7 +68,6 @@ body {
   grid-template-columns: repeat(3, auto);
   margin-bottom: 16px;
   margin-top: 16px;
-  width: 20%;
   z-index: 2;
 }
 .categories a:hover {
@@ -133,14 +130,11 @@ h1::first-letter {
   background-image: linear-gradient(var(--color1) 90%, var(--color3));
   box-shadow: 3px 3px 3px #888;
 }
-.cardImg {
-  width: 100%;
-}
+
 .cardImg img {
   border-radius: 5%;
   display: block;
   margin: 0 auto;
-  width: 100%;
 }
 
 .productNameAndPrice {
@@ -168,7 +162,6 @@ footer {
   text-decoration: none;
   top: 16px;
   vertical-align: middle;
-  width: 100%;
   z-index: 1;
 }
 footer div {
@@ -182,7 +175,6 @@ footer div {
 .footer-2 {
   display: flex;
   gap: 8px;
-  /* overflow: hidden; */
 }
 .footer-2b {
   align-items: center;
@@ -215,7 +207,6 @@ footer div {
 @media only screen and (max-width: 800px) {
   footer {
     display: flex;
-    width: 100%;
     padding-top: 0;
     flex-direction: column;
   }
